@@ -2,6 +2,7 @@ package com.example.otpviewer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.widget.doAfterTextChanged
 import com.example.otpviewer.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        otp1TextWatcher()
+        otp2TextWatcher()
+        otp3TextWatcher()
+        otp4TextWatcher()
+        otp5TextWatcher()
+        otp6TextWatcher()
 
         //GenericTextWatcher here works only for moving to next EditText when a number is entered
 //first parameter is the current EditText and second parameter is next EditText
@@ -34,7 +42,67 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-   private fun isValid():Boolean{
+    private fun otp1TextWatcher() {
+        binding.et1.doAfterTextChanged {
+            if (it!=null){
+                if (it.toString().length>1){
+                    binding.et1.setText(it[0].toString())
+                }
+            }
+        }
+    }
+
+
+    private fun otp2TextWatcher() {
+        binding.et2.doAfterTextChanged {
+            if (it!=null){
+                if (it.toString().length>1){
+                    binding.et2.setText(it[0].toString())
+                }
+            }
+        }
+    }
+
+    private fun otp3TextWatcher() {
+        binding.et3.doAfterTextChanged {
+            if (it!=null){
+                if (it.toString().length>1){
+                    binding.et3.setText(it[0].toString())
+                }
+            }
+        }
+    }
+
+    private fun otp4TextWatcher() {
+        binding.et4.doAfterTextChanged {
+            if (it!=null){
+                if (it.toString().length>1){
+                    binding.et4.setText(it[0].toString())
+                }
+            }
+        }
+    }
+
+    private fun otp5TextWatcher() {
+        binding.et5.doAfterTextChanged {
+            if (it!=null){
+                if (it.toString().length>1){
+                    binding.et5.setText(it[0].toString())
+                }
+            }
+        }
+    }
+
+    private fun otp6TextWatcher() {
+        binding.et6.doAfterTextChanged {
+            if (it!=null){
+                if (it.toString().length>1){
+                    binding.et6.setText(it[0].toString())
+                }
+            }
+        }
+    }
+    private fun isValid():Boolean{
        if (
            binding.et1.text.trim().toString().isEmpty() ||
            binding.et2.text.trim().toString().isEmpty() ||

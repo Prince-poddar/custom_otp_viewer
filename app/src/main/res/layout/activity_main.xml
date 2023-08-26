@@ -39,17 +39,16 @@
         android:id="@+id/tv_verification_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="@string/verification_code"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="normal"
-        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/ll_otp"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/ll_otp"
@@ -69,85 +68,95 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:textStyle="bold"
-            android:cursorVisible="false"
+            android:autofillHints=""
+            android:cursorVisible="true"
             android:digits="1234567890"
-            android:inputType="number"
-            android:maxLength="1"
             android:gravity="center"
-            android:textIsSelectable="false" />
+            android:inputType="number"
+            android:maxLength="2"
+            android:ems="2"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:textIsSelectable="false"
+            android:textStyle="bold" />
 
         <EditText
+            android:selectAllOnFocus="true"
             android:id="@+id/et2"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:cursorVisible="false"
+            android:cursorVisible="true"
             android:digits="1234567890"
-            android:inputType="number"
-            android:maxLength="1"
-            android:textStyle="bold"
             android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:textIsSelectable="false"
 
-            android:textIsSelectable="false" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et3"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:cursorVisible="false"
+            android:cursorVisible="true"
             android:digits="1234567890"
+            android:gravity="center"
             android:inputType="number"
             android:maxEms="1"
-            android:maxLength="1"
-            android:gravity="center"
-
-            android:textStyle="bold"
-            android:textIsSelectable="false" />
+            android:selectAllOnFocus="true"
+            android:maxLength="2"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:textIsSelectable="false"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et4"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:cursorVisible="false"
+            android:cursorVisible="true"
             android:digits="1234567890"
             android:gravity="center"
-
             android:inputType="number"
-            android:textStyle="bold"
-            android:maxLength="1"
-            android:textIsSelectable="false" />
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:textIsSelectable="false"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et5"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:cursorVisible="false"
+            android:cursorVisible="true"
             android:digits="1234567890"
             android:gravity="center"
-
             android:inputType="number"
             android:maxEms="1"
-            android:maxLength="1"
-            android:textStyle="bold"
-            android:textIsSelectable="false" />
+            android:selectAllOnFocus="true"
+            android:maxLength="2"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:textIsSelectable="false"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et6"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:cursorVisible="false"
+            android:cursorVisible="true"
             android:digits="1234567890"
-            android:inputType="number"
-            android:maxLength="1"
             android:gravity="center"
-
-            android:textStyle="bold"
-            android:textIsSelectable="false" />
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:textIsSelectable="false"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -157,13 +166,13 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll_otp"
         android:text="Verify"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_otp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
